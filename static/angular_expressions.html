@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+</head>
+
+
+<body>
+
+
+  <div ng-controller="myController">
+    <h1>Expressions</h1>
+    {{'Bilbo'+' Baggins'}}<br>
+    {{first}} {{last}}<br>
+    {{combine('Bilbo','Baggins')}}<br>
+    {{combine(first,last)}}<br>
+    <p ng-click="setName(newFirst,newLast)">Click to change to {{newFirst}} {{newLast}}</p>
+
+    <p ng-click="setName('Bilbo','Baggins')">Click to change to Bilbo Baggins</p>
+  </div>
+
+  <script src="https://cdn.bootcss.com/angular.js/1.2.9/angular.min.js?v=1"></script>
+  <script src="/js/angular_expressions.js"></script>
+
+
+
+</body>
+
+</html>

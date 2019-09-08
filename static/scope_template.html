@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div ng-controller="SimpleTemplate">
+    ValueA:<input type="number" ng-model="valueA" /><br>
+    ValueB:<input type="number" ng-model="valueB" /><br><br>
+    Expression Value:{{valueA+valueB}} <br><br>
+
+    <input type="button" ng-click="addValues(valueA,valueB)" value="Click to Add Values {{valueA}} && {{valueB}}"><br>
+    Checked Value: {{valueC}}<br>
+
+    <input type="text" ng-model="name"> watched {{counter}}
+  </div>
+
+  <script src="https://cdn.bootcss.com/angular.js/1.2.9/angular.min.js?v=1"></script>
+  <script src="/js/scope_template.js"></script>
+
+
+
+</body>
+
+</html>

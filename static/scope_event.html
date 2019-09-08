@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      padding: 5px;
+      font: 18px bold;
+    }
+
+    span {
+      padding: 3px;
+      margin: 12px;
+      border: 5px ridge;
+      cursor: pointer;
+    }
+
+    label {
+      padding: 2px;
+      margin: 5px;
+      font: 15px bold;
+    }
+
+    p {
+      padding-left: 22px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+
+  <div ng-controller="Characters">
+    <span ng-repeat="name in names" ng-click="changeName()">{{name}}</span>
+    <div ng-controller="Character">
+      <hr>
+      <label for="">Name :</label>
+      <p>{{currentName}}</p>
+      <label for="">Race:</label>
+      <p>{{currentInfo.race}}</p>
+      <label for="">Weapon:</label>
+      <p>{{currentInfo.weapon}}</p>
+      <span ng-click="deleteChar()">Delete</span>
+    </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/angular.js/1.2.9/angular.min.js?v=1"></script>
+  <script src="/js/scope_event.js"></script>
+
+
+
+</body>
+
+</html>

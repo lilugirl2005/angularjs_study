@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    table {
+      text-align: center;
+    }
+
+    td,
+    th {
+      padding: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <div ng-controller="myController">
+    <h2>Sorting and Filtering</h2>
+    <input type="text" ng-model="filterString">
+    <input type="button" ng-click="setFilter()" value="Filter">
+
+    <table>
+      <tr>
+        <td ng-click="setSort('make')">Make</td>
+        <td ng-click="setSort('model')">Model</td>
+        <td ng-click="setSort('mp')">MegaPixel</td>
+      </tr>
+      <tr ng-repeat="camera in filteredCameras | orderBy:column:reverse">
+        <td>
+          {{camera.make}}
+        </td>
+        <td>{{camera.model}}</td>
+        <td>{{camera.mp}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <script src="https://cdn.bootcss.com/angular.js/1.2.9/angular.min.js?v=1"></script>
+  <script src="/js/angular_filter_sort.js"></script>
+
+
+
+</body>
+
+</html>
