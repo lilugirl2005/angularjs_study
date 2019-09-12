@@ -1,0 +1,41 @@
+<!--
+ * @Module: 
+ * @FileName: 
+ * @Description: 
+ * @Author: Liuyi
+ * @Date: 2019-09-12 14:33:47
+ * @LastEditors: Liuyi
+ * @LastEditTime: 2019-09-12 16:48:45
+ -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>animate</title>
+  <style>
+    .img-fade-add, .img-fade-remove{
+      -webkit-transition:all ease 2s;
+      -moz-transition:all ease 2s;
+      -o-transition:all ease 2s;
+      transition:all ease 2s;
+    }
+
+    .img-fade, .img-fade-add.img-fade-add-active{
+      opacity:0.1;
+    }
+  </style>
+</head>
+<body>
+  <div ng-controller="myController">
+     <h3>Image Animation:</h3>
+     <input type="button" ng-click="myImgClass='fadeOut'">
+  </div>
+  
+
+  <script src="https://cdn.bootcss.com/angular.js/1.2.9/angular.min.js?v=1"></script>
+  <script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/js/service_animate.js"></script>
+</body>
+</html>

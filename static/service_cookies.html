@@ -1,0 +1,35 @@
+<!--
+ * @Module: 
+ * @FileName: 
+ * @Description: 
+ * @Author: Liuyi
+ * @Date: 2019-09-12 14:33:47
+ * @LastEditors: Liuyi
+ * @LastEditTime: 2019-09-12 16:09:00
+ -->
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AngularJS $cookie Service</title>
+</head>
+<body>
+  <div ng-controller="myController">
+  <h3>Favorite Cookie:</h3>
+  <input type="radio" value="Chocolate Chip" ng-model="favCookie" ng-change="setCookie()">Chocolate Chip<br>
+  <input type="radio" value="Oatmeal" ng-model="favCookie" ng-change="setCookie()">Oatmeal<br>
+  <input type="radio" value="Frosted" ng-model="favCookie" ng-change="setCookie()">Frosted<br>
+  <input type="radio" value="None" ng-model="favCookie" ng-change="setCookie()">None<br>
+  <hr>
+  Cookies: {{myFavCookie}}
+  </div>
+
+
+
+  <script src="https://cdn.bootcss.com/angular.js/1.2.9/angular.min.js?v=1"></script>
+  <script src="https://cdn.bootcss.com/angular.js/1.2.9/angular-cookies.js"></script>
+  <script src="/js/service_cookies.js"></script>
+</body>
+</html>
